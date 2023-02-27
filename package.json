@@ -1,0 +1,9 @@
+{
+	"name": "fila-core",
+	"author": "Paul Gordon",
+	"description": "Abstract file system layer with pluggable backends",
+	"version": "1.0.0",
+	"main": "fila.js",
+	"scripts": {},
+	"license": "MIT"
+}
