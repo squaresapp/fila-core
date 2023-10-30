@@ -552,7 +552,7 @@ namespace Fila
 					path = args[i];
 				else
 				{
-					if (cwd === undefined)
+					if (cwd === undefined && typeof process === "object")
 						cwd = process.cwd();
 					
 					path = cwd;
@@ -585,6 +585,8 @@ namespace Fila
 			return ".";
 		},
 	};
+	
+	declare const process: any;
 	
 	/** */
 	const enum Char
