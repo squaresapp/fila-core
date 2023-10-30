@@ -2,10 +2,10 @@
 abstract class Fila
 {
 	/**
-	 * Call this method during application launch to ensure that the
-	 * Fila backend is properly constructed. 
+	 * Call this method with a particular Fila backend on the left-hand side to
+	 * force it to be the default Fila form. For example FilaNode.use();
 	 */
-	static async construct() { }
+	static use() { }
 	
 	/** */
 	protected static setDefaults(

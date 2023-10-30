@@ -4,9 +4,6 @@ namespace Cover
 	/** */
 	export async function coverFila()
 	{
-		debugger;
-		await Fila.construct();
-		
 		const path = (globalThis as any).__TAURI__.path;
 		const cwdString: string = await path.appDataDir();
 		const cwd = Fila.new(cwdString);
