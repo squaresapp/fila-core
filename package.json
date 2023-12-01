@@ -2,8 +2,35 @@
 	"name": "fila-core",
 	"author": "Paul Gordon",
 	"description": "Abstract file system layer with pluggable backends",
+	"license": "MIT",
 	"version": "1.0.0",
-	"main": "fila.js",
-	"scripts": {},
-	"license": "MIT"
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/scrollapp/fila-core"
+	},
+	"bugs": {
+		"url": "https://github.com/scrollapp/fila-core/issues"
+	},
+	"main": "fila-core.js",
+	"browser": "fila-core.js",
+	"module": "fila-core.esm.js",
+	"types": "fila-core.d.ts",
+	"publishConfig": {
+		"access": "public"
+	},
+	"files": [
+		"LICENSE.txt",
+		"readme.md",
+		"fila-core.js",
+		"fila-core.min.js",
+		"fila-core.d.ts",
+		"fila-core.d.ts.map",
+		"fila-core.esm.js"
+	],
+	"scripts": {
+		"test": "exit 0",
+		"esm": "sed 's/\\/\\/+ //' ./+build/fila-core.js > ./+build/fila-core.esm.js",
+		"bundle": "tsc -p tsconfig.release.json && terser ./+build/fila-core.debug.js > ./+build/fila-core.min.js && npm run esm",
+		"release": "npm run bundle && cd ./+build && cp ../package.json ./package.json && np"
+	}
 }
