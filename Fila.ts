@@ -116,7 +116,7 @@ abstract class Fila
 	abstract readDirectory(): Promise<Fila[]>;
 	
 	/** */
-	abstract writeText(text: string): Promise<void>;
+	abstract writeText(text: string, options?: Fila.IWriteTextOptions): Promise<void>;
 	
 	/** */
 	abstract writeBinary(buffer: ArrayBuffer): Promise<void>;
@@ -287,6 +287,12 @@ abstract class Fila
 
 namespace Fila
 {
+	/** */
+	export interface IWriteTextOptions
+	{
+		readonly append: boolean;
+	}
+	
 	/** */
 	export function join(...args: string[])
 	{
