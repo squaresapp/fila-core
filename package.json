@@ -3,7 +3,7 @@
 	"author": "Paul Gordon",
 	"description": "Abstract file system layer with pluggable backends",
 	"license": "MIT",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/scrollapp/fila-core"
