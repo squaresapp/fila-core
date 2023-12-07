@@ -614,7 +614,7 @@ namespace Fila
 typeof module === "object" && Object.assign(module.exports, { Fila });
 
 // ES module compatibility
-declare module "@scrollapp/fila-core"
+declare module "fila-core"
 {
 	const __export: { Fila: typeof Fila };
 	export = __export;
